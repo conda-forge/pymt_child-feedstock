@@ -14,8 +14,8 @@ Summary: Child landscape evolution model wrapped as a PyMT plugin
 Current build status
 ====================
 
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pymt_child-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pymt_child-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/pymt_child-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pymt_child-feedstock)
-![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
 ![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
