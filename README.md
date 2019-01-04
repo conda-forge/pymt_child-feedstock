@@ -1,6 +1,8 @@
 About pymt_child
 ================
 
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
 Home: http://github.com/mcflugen/pymt_child
 
 Package license: MIT
@@ -14,8 +16,8 @@ Summary: Child landscape evolution model wrapped as a PyMT plugin
 Current build status
 ====================
 
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pymt_child-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pymt_child-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/pymt_child-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pymt_child-feedstock)
-![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
 ![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
@@ -104,3 +106,9 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@mcflugen](https://github.com/mcflugen/)
+
