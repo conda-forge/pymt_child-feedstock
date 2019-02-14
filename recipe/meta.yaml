@@ -1,4 +1,4 @@
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: pymt_child
@@ -6,25 +6,25 @@ package:
 
 source:
   url: https://github.com/mcflugen/pymt_child/archive/v{{ version }}.tar.gz
-  sha256: ec2fe44a8a942c797a4c3bbc87d40e8421e89dfe1394799621be8d8f02b91b5f
+  sha256: 6e8d6f87da9376145db73979da89d2bb4074e1a805449df95a60bee8f7b382a0
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win or linux]
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
-    - python
+    - python >=3
     - pip
     - cython
-    - numpy =1.11
+    - numpy
     - model_metadata
     - child
   run:
-    - python
+    - python >=3
     - {{ pin_compatible('numpy') }}
     - child
 
