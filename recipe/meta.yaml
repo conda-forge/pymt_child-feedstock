@@ -10,21 +10,21 @@ source:
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win or linux]
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python
+    - python >=3
     - pip
     - cython
-    - numpy =1.11
+    - numpy
     - model_metadata
     - child
   run:
-    - python
+    - python >=3
     - {{ pin_compatible('numpy') }}
     - child
 
