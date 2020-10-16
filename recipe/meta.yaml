@@ -29,8 +29,10 @@ requirements:
     - child
 
 test:
-  imports:
-    - pymt_child
+  requires:
+    - bmi_tester
+  commands:
+    - bmi-test pymt_child:Child -vvv
 
 about:
   home: http://github.com/mcflugen/pymt_child
