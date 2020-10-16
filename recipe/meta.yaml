@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
-  skip: True  # [win]
+  skip: True  # [win or py<3.7]
 
 requirements:
   build:
@@ -19,11 +19,11 @@ requirements:
     - cython
     - numpy
   host:
-    - python >=3.7
+    - python
     - pip
     - child
   run:
-    - python >=3.7
+    - python
     - {{ pin_compatible('numpy') }}
     - child
 
