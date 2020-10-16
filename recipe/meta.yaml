@@ -24,6 +24,7 @@ requirements:
     - child
   run:
     - python
+    - setuptools
     - {{ pin_compatible('numpy') }}
     - child
 
