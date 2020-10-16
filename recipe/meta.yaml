@@ -30,7 +30,7 @@ requirements:
 
 test:
   requires:
-    - bmi_tester
+    - bmi-tester
   commands:
     - bmi-test pymt_child:Child -vvv
 
