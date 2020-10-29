@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/mcflugen/pymt_child/archive/v{{ version }}.tar.gz
-  sha256: 
+  sha256: 5f62a648fed491ca003899a3d37af9306cbad8f11d7bf62cf7de96c70683aa06
 
 build:
   number: 1
