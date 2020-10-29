@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/mcflugen/pymt_child/archive/v{{ version }}.tar.gz
-  sha256: 4fc01aa25fced25ef30dcba486039e7ac5653a5dce7f76373552bb1a3195e136
+  sha256: 5f62a648fed491ca003899a3d37af9306cbad8f11d7bf62cf7de96c70683aa06
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win or py<37]
 
@@ -21,16 +21,18 @@ requirements:
     - pip
     - cython
     - numpy
-    - child
+    - child >=20.10.29
   run:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - child
+    - child >=20.10.29
 
 test:
   requires:
     - bmi-tester
+  imports:
+    - pymt_child
   commands:
     - bmi-test pymt_child:Child -vvv
 
