@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: pymt_child
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/mcflugen/pymt_child/archive/v{{ version }}.tar.gz
-  sha256: 5f62a648fed491ca003899a3d37af9306cbad8f11d7bf62cf7de96c70683aa06
+  sha256: f60f876c7ca5bfe83eedcb4fbb8b6be0386c203e13b3aa531e99cb4fcea259e2
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
-  skip: True  # [win or py<37]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
+  skip: true  # [win or py<37]
 
 requirements:
   build:
