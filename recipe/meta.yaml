@@ -21,6 +21,7 @@ requirements:
     - pip
     - cython
     - numpy
+    - bmicxx
     - child >=21.03.12
   run:
     - python
