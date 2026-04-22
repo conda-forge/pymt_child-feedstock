@@ -9,7 +9,7 @@ source:
   sha256: f60f876c7ca5bfe83eedcb4fbb8b6be0386c203e13b3aa531e99cb4fcea259e2
 
 build:
-  number: 3
+  number: 4
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
   skip: True  # [win and vc<14]
 
@@ -20,6 +20,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
@@ -30,7 +31,6 @@ requirements:
   run:
     - python
     - setuptools
-    - {{ pin_compatible('numpy') }}
     - child >=21.03.12
 
 test:
